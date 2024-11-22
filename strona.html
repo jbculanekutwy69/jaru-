@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie odległości między punktami Sebastian Rusin</title>
+    <script>
+    function calculateDistance() 
+    {
+    do 
+    {
+    let x1 = prompt("Podaj współrzędną X1:");
+    let y1 = prompt("Podaj współrzędną Y1:");
+    let x2 = prompt("Podaj współrzędną X2:");
+    let y2 = prompt("Podaj współrzędną Y2:");
+    x1 = parseFloat(x1);
+    y1 = parseFloat(y1);
+    x2 = parseFloat(x2);
+    y2 = parseFloat(y2);
+    if (isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) 
+    {
+    alert("Wprowadzono nieprawidłowe dane. Spróbuj ponownie.");
+    continue;
+    }
+    let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    distance = Math.round(distance);
+    alert(`Odległość między punktami wynosi: ${distance}`);
+    } 
+    while (confirm("Czy chcesz obliczyć odległość dla nowych punktów?"));
+    }
+    </script>
+</head>
+<body onload="calculateDistance()">
+    <h1>Obliczanie odległości między punktami</h1>
+</body>
+</html>
+
